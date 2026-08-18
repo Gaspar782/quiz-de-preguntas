@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Interactivo</title>
+  <link rel="stylesheet" href="Styles.css" />
+</head>
+
+<body>
+  <main class="container">
+    <!-- Pantalla inicial -->
+    <section id="screen-start" class="card">
+      <h1>Quiz Interactivo</h1>
+      <p class="desc">
+        Respondé las preguntas de opción múltiple y al final vas a ver tu puntaje.
+      </p>
+      <button id="btn-start" class="btn">Comenzar</button>
+    </section>
+
+    <!-- Pantalla de preguntas -->
+    <section id="screen-quiz" class="card hidden">
+      <div class="topbar">
+        <h2 id="question-title">Pregunta</h2>
+        <p id="progress" class="progress"></p>
+      </div>
+
+      <h3 id="question-text" class="question-text"></h3>
+
+      <div id="options" class="options"></div>
+
+      <div class="actions">
+        <button id="btn-next" class="btn" disabled>Siguiente</button>
+      </div>
+    </section>
+
+    <!-- Pantalla final -->
+    <section id="screen-end" class="card hidden">
+      <h1>Resultados</h1>
+      <p><strong>Correctas:</strong> <span id="correct"></span></p>
+      <p><strong>Incorrectas:</strong> <span id="incorrect"></span></p>
+      <p class="final-score"><strong>Puntaje:</strong> <span id="score"></span></p>
+
+      <button id="btn-restart" class="btn secondary">Volver a empezar</button>
+    </section>
+  </main>
+
+  <script src="sitio.js"></script>
+</body>
+</html>
